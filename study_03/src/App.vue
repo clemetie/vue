@@ -1,9 +1,24 @@
 <script setup>
 import Ifex from "./components/Ifex.vue";
+import Vbind from "./components/Vbind.vue";
 </script>
 
 <template>
-  <Ifex />
+  <div class="wrap">
+    <Ifex />
+    <Vbind />
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.wrap {
+  display: flex;
+}
+.box {
+  flex: 1;
+  padding: 20px;
+}
+h2 {
+  background-color: pink;
+}
+</style>

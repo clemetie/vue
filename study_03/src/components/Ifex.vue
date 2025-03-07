@@ -20,10 +20,11 @@ const selectDate = ref("");
 </script>
 
 <template>
-  <div>
+  <div class="box">
     <!-- v-if, v-show -->
     <div class="if-show">
-      <h2>v-if, v-show</h2>
+      <h2>V-if, V-show</h2>
+      <hr>
       <button @click="isVisible = !isVisible">지수언니🌸</button>
       <p v-if="isVisible">
         V-if: 조건 true일 때 나와여 (조건이 false면 Dom에서 완전히 제거됨.)
@@ -37,8 +38,8 @@ const selectDate = ref("");
     <!-- 전환 -->
     <div class="if">
       <button @click="nice = !nice">전환</button>
-      <h2 v-if="nice">🍀</h2>
-      <h2 v-else>🌸</h2>
+      <h4 v-if="nice">🍀</h4>
+      <h4 v-else>🌸</h4>
     </div>
     <hr />
     <!-- ABC -->
@@ -57,7 +58,7 @@ const selectDate = ref("");
     <!-- 단락 -->
     <button @click="ok = !ok">🌼</button>
     <div v-if="ok">
-      <h1 class="info">제목</h1>
+      <h3 class="info">제목</h3>
       <p>단락 1</p>
       <p>단락 2</p>
     </div>
@@ -74,7 +75,7 @@ const selectDate = ref("");
     <hr />
     <!-- 예약 가능 여부에 따라서 버튼 다르게 보이기 -->
     <div class="container">
-      <h2>예약 ㄱㄴ ?</h2>
+      <h4>예약 ㄱㄴ ?</h4>
       <!-- 객체 문법 (:class="{ '클래스명1': 조건1, '클래스명2': 조건2 }) -->
       <p :class="{ available: isAvailable, unavailble: !isAvailable }">
         {{ isAvailable ? "ㅇㅇ" : "ㄴㄴ" }}
@@ -89,7 +90,7 @@ const selectDate = ref("");
     <hr />
     <!-- 예약 날짜 선택  -->
     <div class="dateBox">
-      <h2>예약 날짜💌</h2>
+      <h4>예약 날짜💌</h4>
       <input type="date" class="date-input" v-model="selectDate" />
       <p :class="{ selected: selectDate, unselected: !selectDate }">
         {{ selectDate ? `예약 : ${selectDate} 임` : "날짜 선택하세용" }}
@@ -99,6 +100,9 @@ const selectDate = ref("");
 </template>
 
 <style scoped>
+h2 {
+  background-color: pink;
+}
 .info {
   background-color: pink;
 }
