@@ -1,4 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import "./assets/variable.css";
+import "./assets/variables.css";
+import "./assets/bagic.css";
 createApp(App).mount("#app");

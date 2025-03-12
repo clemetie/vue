@@ -1,16 +1,19 @@
 <script setup>
-import Vref from "./components/Vref.vue";
-import Ex1 from "./components/Ex-1.vue";
-import Ex2 from "./components/Ex-2.vue"
+import Ex_01 from "./components/Ex_01.vue";
+import Ex_02 from "./components/Ex_02.vue";
+import Ex_03 from "./components/Ex_03.vue";
+import Vmodel from "./components/Vmodel.vue";
 </script>
 
 <template>
-  <div>
-    <!-- <Vref /> -->
+  <div class="wrap">
+    <Vmodel />
+  
+    <Ex_03 />
     <hr />
-    <Ex1 />
+    <Ex_01 />
     <hr />
-    <Ex2 />
+    <Ex_02 />
   </div>
 </template>
 
