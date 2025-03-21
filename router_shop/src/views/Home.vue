@@ -5,32 +5,35 @@ const products = ref([
   {
     id: 1,
     name: "상품1",
-    price: "399,900원",
+    price: 389900,
     image: "/public/images/product1.png",
   },
   {
     id: 2,
     name: "상품2",
-    price: "299,900원",
+    price: 289900,
     image: "/public/images/product2.png",
   },
   {
     id: 3,
     name: "상품3",
-    price: "199,900원",
+    price: 189900,
     image: "/public/images/product3.png",
   },
   {
     id: 4,
     name: "상품4",
-    price: "499,900원",
+    price: 489900,
     image: "/public/images/product4.png",
   },
 ]);
 const router = useRouter();
 const goToDetail = (id) => {
-//   console.log(id);
+  //   console.log(id);
   router.push(`/product/${id}`);
+};
+const changeprice = (price) => {
+  return `${price.toLocaleString()}`;
 };
 </script>
 <template>
@@ -46,7 +49,8 @@ const goToDetail = (id) => {
         <p style="font-weight: bold; color: #1465da">
           상품명: {{ product.name }}
         </p>
-        <p>가격: {{ product.price }}</p>
+        <p>가격: {{ changeprice(product.price) }}원</p>
+       
       </div>
     </div>
   </div>

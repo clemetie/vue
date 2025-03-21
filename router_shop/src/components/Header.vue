@@ -3,10 +3,12 @@
   <header>
     <nav>
       <router-link to="/"><span class="logo">BingFree</span></router-link>
-      <router-link to="/about">빙프리란</router-link>
-      <router-link to="/check">요금안내</router-link>
-      <router-link to="/review">고객리뷰</router-link>
-      <router-link to="/reservation">예약하기</router-link>
+      <div class="depth">
+        <router-link to="/about">빙프리란</router-link>
+        <router-link to="/check">요금안내</router-link>
+        <router-link to="/review">고객리뷰</router-link>
+        <router-link to="/reservation">예약하기</router-link>
+      </div>
     </nav>
   </header>
 </template>
@@ -17,6 +19,10 @@ header {
   padding: 20px 0;
   text-align: center;
 }
+header nav {
+  display: flex;
+  justify-content: space-around;
+}
 nav a {
   margin: 0 10px;
   font-weight: bold;
@@ -24,5 +30,4 @@ nav a {
 nav a:hover {
   color: #e9ff54;
 }
-
 </style>
